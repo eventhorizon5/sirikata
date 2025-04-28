@@ -71,14 +71,14 @@ clean:
 DEPVC8REV=HEAD
 DEPVC9REV=27
 DEPOSXREV=99
-DEPSOURCE=75
+DEPSOURCE=79
 DEPARCHINDEP=7
 #========== Dependencies ===========
 
 distributions:
 	case "`uname`" in \
 		*arwin*) \
-			svn co -r$(DEPOSXREV) http://sirikataosx.googlecode.com/svn/trunk dependencies \
+			git clone https://github.com/sirikata-data/sirikata.git dependencies \
 			;; \
 		*MINGW*|*CYGWIN*|*win32*) \
 			if [ x = x"$(VCVER)" ]; then \
@@ -93,16 +93,16 @@ distributions:
 			fi \
 			;; \
 		*) \
-			svn co -r$(DEPSOURCE) http://sirikataunix.googlecode.com/svn/trunk dependencies \
+			git clone https://github.com/danielrh/sirikatamachindep.git dependencies \
 			;; \
 	esac ; \
-	svn co -r$(DEPARCHINDEP) http://sirikatamachindep.googlecode.com/svn/trunk/ dependencies/machindependencies
+	git clone https://github.com/danielrh/sirikatamachindep.git dependencies/machindependencies
 
 update-dependencies: distributions
 	git submodule update --init --recursive || true
 	case "`uname`" in \
 		*arwin*) \
-			cd dependencies && svn update -r$(DEPOSXREV) \
+			cd dependencies \
 			;; \
 		*MINGW*|*CYGWIN*|*win32*) \
 			if [ x = x"$(VCVER)" ]; then \
@@ -122,7 +122,7 @@ update-dependencies: distributions
 			cd dependencies && svn update -r$(DEPSOURCE) \
 			;; \
 	esac ; \
-	svn co -r$(DEPARCHINDEP) http://sirikatamachindep.googlecode.com/svn/trunk/ machindependencies
+	#svn co -r$(DEPARCHINDEP) http://sirikatamachindep.googlecode.com/svn/trunk/ machindependencies
 
 
 minimal-depends: update-dependencies
