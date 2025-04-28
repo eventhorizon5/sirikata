@@ -1,27 +1,27 @@
 [submodule "externals/berkelium"]
 	path = externals/berkelium
-	url = git://github.com/sirikata/berkelium.git
+	url = https://github.com/sirikata/berkelium.git
 [submodule "externals/pbj"]
 	path = externals/pbj
-	url = git://github.com/sirikata/pbj.git
+	url = https://github.com/sirikata/pbj.git
 [submodule "externals/cxxtest"]
 	path = externals/cxxtest
-	url = git://github.com/sirikata/cxxtest.git
+	url = https://github.com/sirikata/cxxtest.git
 [submodule "externals/prox"]
 	path = externals/prox
-	url = git://github.com/sirikata/prox.git
+	url = https://github.com/sirikata/prox.git
 [submodule "externals/http-parser"]
 	path = externals/http-parser
-	url = git://github.com/joyent/http-parser.git
+	url = https://github.com/joyent/http-parser.git
 [submodule "externals/sirikata-protocol"]
 	path = externals/sirikata-protocol
-	url = git://github.com/sirikata/sirikata-protocol.git
+	url = https://github.com/sirikata/sirikata-protocol.git
 [submodule "externals/liboauthcpp"]
 	path = externals/liboauthcpp
-	url = git://github.com/sirikata/liboauthcpp.git
+	url = https://github.com/sirikata/liboauthcpp.git
 [submodule "liboh/plugins/ogre/data/ace"]
 	path = liboh/plugins/ogre/data/ace
 	url = https://github.com/ajaxorg/ace.git
 [submodule "externals/json-spirit"]
 	path = externals/json-spirit
-	url = git://github.com/sirikata/json-spirit.git
+	url = https://github.com/sirikata/json-spirit.git
